@@ -5,7 +5,7 @@ import base64
 API_URL = "https://utkarsh134-logogeneration.hf.space/generate-logo"  
 
 st.set_page_config(page_title="Logo Generator", layout="centered")
-st.title("🧠 Logo Generator using Gemini AI")
+st.title("Logo Generator ")
 
 with st.form("logo_form"):
     brand_name = st.text_input("Brand Name", placeholder="e.g., EcoTech")
