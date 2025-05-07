@@ -4,7 +4,7 @@ from PIL import Image
 import base64
 import io
 
-API_URL = "http://localhost:8000"
+API_URL = "https://utkarsh134-logogeneration.hf.space"
 
 st.set_page_config(
     page_title="AI Logo Generator",
