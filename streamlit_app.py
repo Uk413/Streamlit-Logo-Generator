@@ -4,9 +4,6 @@ import base64
 import io
 from PIL import Image
 import os
-from dotenv import load_dotenv
-
-load_dotenv()
 
 st.set_page_config(
     page_title="AI Logo Generator",
@@ -14,6 +11,7 @@ st.set_page_config(
     layout="wide",
 )
 
+# Custom CSS
 st.markdown("""
 <style>
     .main-header {
@@ -40,7 +38,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-API_URL = os.getenv("API_URL", "https://utkarsh134-logogeneration.hf.space/generate-logo")
+API_URL = "https://utkarsh134-logogeneration.hf.space/generate-logo"
 
 
 def display_logos(logos):
@@ -72,6 +70,7 @@ def display_logos(logos):
 
                     st.image(image, caption=f"Logo {i+1}", use_container_width=True)
                     
+                    # Download button
                     btn = st.download_button(
                         label=f"Download Logo {i+1}",
                         data=image_bytes,
@@ -128,3 +127,5 @@ if submitted:
                     st.error(f"Error: {response.status_code} - {response.text}")
             except Exception as e:
                 st.error(f"An error occurred: {str(e)}")
+
+
