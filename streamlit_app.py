@@ -36,7 +36,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 
-API_URL = "https://utkarsh134-logogeneration.hf.space"
+API_URL = "https://utkarsh134-logogeneration.hf.space/generate-logo"
 
 
 def display_logos(logos):
